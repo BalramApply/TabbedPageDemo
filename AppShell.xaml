@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TabbedPageDemo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TabbedPageDemo"
+    Shell.FlyoutBehavior="Disabled"
+    Title="TabbedPageDemo">
+
+    <TabBar>
+        <Tab Title="Home" Icon="home.png">
+            <ShellContent Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage" />
+        </Tab>
+
+        <Tab Title="Red Page" Icon="letter_red.png">
+            <ShellContent Title="Red Page"
+            ContentTemplate="{DataTemplate local:RedPage}" Route="RedPage" />
+        </Tab>
+
+        <Tab Title="Green Page" Icon="task.png">
+            <ShellContent Title="Gren Page"
+            ContentTemplate="{DataTemplate local:GreenPage}" Route="GreenPage" />
+        </Tab>
+
+        <Tab Title="Blue Page" Icon="dotnet_bot.png">
+            <ShellContent Title="Blue Page"
+            ContentTemplate="{DataTemplate local:BluePage}" Route="BluePage" />
+        </Tab>
+        
+        <!-- you can add a new content page without adding a new class  -->
+        <Tab Title="Yellow Page" Icon="letter_red.png">
+            <ShellContent Title="Yellow Page" Route="YellowPage">
+                <ContentPage BackgroundColor="Yellow">
+                    <VerticalStackLayout Spacing="15" Padding="0, 20"
+                 HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label 
+    Text="Yellow Page" TextColor="Black"
+    VerticalOptions="Center" HorizontalOptions="Center" 
+    FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+
+        <Tab Title="Orange Page" Icon="letter_red.png">
+            <ShellContent Title="Orange Page" Route="OrangePage">
+                <ContentPage BackgroundColor="Orange">
+                    <VerticalStackLayout Spacing="15" Padding="0, 20"
+             HorizontalOptions="Center" VerticalOptions="Center">
+                        <Label 
+Text="Orange Page" TextColor="Black"
+VerticalOptions="Center" HorizontalOptions="Center" 
+FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                </ContentPage>
+            </ShellContent>
+        </Tab>
+    </TabBar>
+</Shell>
